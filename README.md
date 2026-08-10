@@ -29,7 +29,7 @@ Create a process management utility named **`otProcessManager`** to monitor and 
 
 ## 📊 Figure 1: Process Management Utility
 
-```mermaid
+```
 flowchart TD
     A["otProcessManager"] --> B{"Select Operation"}
 
