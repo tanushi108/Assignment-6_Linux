@@ -27,32 +27,6 @@ Create a process management utility named **`otProcessManager`** to monitor and 
 
 ---
 
-## 📊 Figure 1: Process Management Utility
-
-```
-flowchart TD
-    A["otProcessManager"] --> B{"Select Operation"}
-
-    B --> C["Top Process"]
-    B --> D["Kill Least Priority"]
-    B --> E["Running Duration"]
-    B --> F["Orphan Process"]
-    B --> G["Zombie Process"]
-    B --> H["Kill Process"]
-    B --> I["Waiting Process"]
-
-    C --> C1["CPU"]
-    C --> C2["Memory"]
-
-    E --> E1["Process Name"]
-    E --> E2["Process ID"]
-
-    H --> H1["Process Name"]
-    H --> H2["Process ID"]
-```
-
----
-
 ## 📍 Task 1: Top N Processes by Memory
 
 Find the top **N processes** based on memory consumption.
@@ -203,30 +177,7 @@ Find processes that are currently waiting for resources.
 ./otProcessManager ListWaitingProcess
 ```
 
----
 
-## 📊 Figure 2: Part A Workflow
-
-```mermaid
-flowchart LR
-    A["User"] --> B["otProcessManager"]
-
-    B --> C["CPU Monitoring"]
-    B --> D["Memory Monitoring"]
-    B --> E["Process Duration"]
-    B --> F["Process Killing"]
-    B --> G["Orphan Detection"]
-    B --> H["Zombie Detection"]
-    B --> I["Waiting Process Detection"]
-
-    C --> J["Process Information"]
-    D --> J
-    E --> J
-    F --> J
-    G --> J
-    H --> J
-    I --> J
-```
 
 ---
 
@@ -245,28 +196,6 @@ The utility should support:
 * ⚡ Change process priority
 * 📋 List registered services
 * 📊 Display process details
-
----
-
-## 📊 Figure 3: Process Manager Architecture
-
-```mermaid
-flowchart TD
-    A["ProcessManager.sh"] --> B["Service Registry"]
-
-    B --> C["service1"]
-    B --> D["service2"]
-    B --> E["service3"]
-
-    A --> F["Linux Process"]
-
-    F --> G["PID"]
-    F --> H["State"]
-    F --> I["Priority"]
-    F --> J["Script"]
-```
-
----
 
 ## 📍 Task 1: Register a Service
 
@@ -308,25 +237,6 @@ Start the registered service as a daemon/background process.
 ./ProcessManager.sh -o start -a service1
 ```
 
----
-
-## 📊 Figure 4: Service Start Flow
-
-```mermaid
-flowchart TD
-    A["Start Service"] --> B["Enter Alias"]
-    B --> C["Find Registered Service"]
-    C --> D{"Service Exists?"}
-
-    D -->|No| E["Display Error"]
-    D -->|Yes| F["Get Script Path"]
-
-    F --> G["Start Script"]
-    G --> H["Run as Daemon"]
-    H --> I["Store PID"]
-```
-
----
 
 ## 📍 Task 3: Check Service Status
 
@@ -599,38 +509,6 @@ Verify the change:
 ps -o pid,ni,comm -p <PID>
 ```
 
----
-
-## 📊 Figure 9: Changing Process Priority
-
-```mermaid
-flowchart LR
-    A["Running Process"] --> B["Check Nice Value"]
-    B --> C["renice"]
-    C --> D["New Nice Value"]
-    D --> E["Changed Scheduling Priority"]
-```
-
----
-
-# 🛠️ Useful Linux Commands
-
-The following Linux commands can be useful while implementing this assignment:
-
-```bash
-ps
-top
-pgrep
-pkill
-kill
-killall
-nice
-renice
-pstree
-lsof
-awk
-grep
-```
 
 ### 🔹 Display Processes
 
@@ -670,50 +548,6 @@ renice -n <value> -p <PID>
 
 ---
 
-# 📁 Suggested Project Structure
-
-```text
-ProcessManagement/
-│
-├── README.md
-│
-├── Part-A/
-│   └── otProcessManager
-│
-├── Part-B/
-│   ├── ProcessManager.sh
-│   └── services/
-│       ├── service1.sh
-│       ├── service2.sh
-│       └── service3.sh
-│
-└── Part-C/
-    └── process-experiments.txt
-```
-
----
-
-## 📊 Figure 10: Project Structure
-
-```mermaid
-flowchart TD
-    A["ProcessManagement"] --> B["README.md"]
-    A --> C["Part-A"]
-    A --> D["Part-B"]
-    A --> E["Part-C"]
-
-    C --> C1["otProcessManager"]
-
-    D --> D1["ProcessManager.sh"]
-    D --> D2["services"]
-    D2 --> D3["service1.sh"]
-    D2 --> D4["service2.sh"]
-    D2 --> D5["service3.sh"]
-
-    E --> E1["process-experiments.txt"]
-```
-
----
 
 # ▶️ Execution
 
@@ -798,16 +632,5 @@ After completing this assignment, you will be able to:
 | 📌 Part B | Service Management              | `ProcessManager.sh` |
 | 📌 Part C | Process Experiments             | Linux Commands      |
 
----
-
-## 🏆 Final Outcome
-
-By completing this assignment, you will gain practical knowledge of:
-
-**Linux Processes → Process Monitoring → Process Priority → Process Control → Daemons → Service Management → File Descriptors**
-
----
-
-**CC:** @Aditya Kaushik Sir, @Faisal Sir
 
 ## 🏁 Happy Learning! 🚀
