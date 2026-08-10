@@ -432,20 +432,6 @@ The process continues running because only the **contents of the log file** are 
 
 ---
 
-## 📊 Figure 7: Clearing Log File
-
-```mermaid
-flowchart LR
-    A["Running Process"] --> B["application.log"]
-
-    C["Clear File"] --> B
-
-    B --> D["File Becomes Empty"]
-    A --> E["Process Continues Running"]
-```
-
----
-
 ## 📍 Task 2: Delete a Log File of a Running Process
 
 Delete the log file:
@@ -468,18 +454,6 @@ The process can continue using its open file descriptor.
 
 ---
 
-## 📊 Figure 8: Delete Log File
-
-```mermaid
-flowchart TD
-    A["Running Process"] --> B["Open File Descriptor"]
-    B --> C["application.log"]
-
-    D["rm application.log"] --> E["Directory Entry Removed"]
-
-    B --> F["File Descriptor Still Open"]
-    F --> G["Process Continues Running"]
-```
 
 ---
 
@@ -520,24 +494,6 @@ ps -ef
 
 ```bash
 ps -eo pid,ppid,user,%cpu,%mem,stat,ni,comm
-```
-
-### 🔹 Find Process by Name
-
-```bash
-pgrep <process-name>
-```
-
-### 🔹 Kill Process
-
-```bash
-kill <PID>
-```
-
-### 🔹 Kill Process by Name
-
-```bash
-pkill -f <process-name>
 ```
 
 ### 🔹 Change Process Priority
