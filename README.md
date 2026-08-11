@@ -374,6 +374,8 @@ service3
 
 <img width="671" height="258" alt="image" src="https://github.com/user-attachments/assets/1d2d2159-c6a6-491b-9cb8-78173f6c3a87" />
 
+<img width="673" height="294" alt="image" src="https://github.com/user-attachments/assets/ed1157fc-60ec-405c-a2a2-646f83647c83" />
+
 ---
 
 ## 📍 Task 7: Display Process Details
@@ -432,19 +434,6 @@ ps -ef
 ```
 <img width="866" height="405" alt="image" src="https://github.com/user-attachments/assets/c6077edf-77fa-4bfb-89eb-bdaccbab4584" />
 
-
----
-
-
-### 📖 Observation
-
-If a running process has the file open, deleting the file name does not immediately terminate the process.
-
-The process can continue using its open file descriptor.
-
----
-
-
 ---
 
 ## 📍 Task 3: Elevate the Priority of a Process
@@ -469,6 +458,8 @@ ps -eo pid,ppid,user,%cpu,%mem,stat,ni,comm
 ```bash
 renice -n <value> -p <PID>
 ```
+
+<img width="490" height="400" alt="image" src="https://github.com/user-attachments/assets/a2c4b144-e342-4f7c-b9f8-6f433569b838" />
 
 ---
 
