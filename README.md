@@ -1,5 +1,4 @@
 # Assignment-6_Linux
-# 📘 Linux Assignment — Process Management Utility
 
 ## 🎯 Objective
 
@@ -43,6 +42,9 @@ Find the top **N processes** based on memory consumption.
 Top 5 processes by memory
 ```
 
+<img width="532" height="141" alt="image" src="https://github.com/user-attachments/assets/221a54e9-48e6-47d9-92e7-97608d12dbd8" />
+
+
 ---
 
 ## 📍 Task 2: Top N Processes by CPU
@@ -61,6 +63,8 @@ Find the top **N processes** based on CPU consumption.
 Top 10 processes by CPU
 ```
 
+<img width="561" height="226" alt="image" src="https://github.com/user-attachments/assets/2fa7587e-24a3-4cc7-9e1b-9d576c08efd8" />
+
 ---
 
 ## 📍 Task 3: Kill Process Having Least Priority
@@ -72,6 +76,7 @@ Find and terminate the process having the lowest priority.
 ```bash
 ./otProcessManager killLeastPriorityProcess
 ```
+<img width="534" height="54" alt="image" src="https://github.com/user-attachments/assets/3d03f82b-95e2-4002-8145-3143f85df899" />
 
 ---
 
@@ -94,14 +99,17 @@ Find how long a particular process has been running.
 ### 📝 Example
 
 ```bash
-./otProcessManager RunningDurationProcess nginx
+./otProcessManager RunningDurationProcess slack
 ```
 
 or
 
 ```bash
-./otProcessManager RunningDurationProcess 1234
+./otProcessManager RunningDurationProcess 7213
 ```
+
+
+<img width="645" height="280" alt="image" src="https://github.com/user-attachments/assets/cfdd1f3e-8f04-417d-a03a-2079ba367772" />
 
 ---
 
@@ -119,6 +127,8 @@ Find orphan processes running on the system.
 
 An **orphan process** is a process whose parent process has terminated while the child process is still running.
 
+<img width="645" height="598" alt="image" src="https://github.com/user-attachments/assets/c612c11c-1fa3-47cf-9b69-6129ff859a9b" />
+
 ---
 
 ## 📍 Task 6: List Zombie Processes
@@ -134,6 +144,8 @@ Find zombie processes running on the system.
 ### 📖 Definition
 
 A **zombie process** is a process that has completed execution but still has an entry in the process table because its parent has not collected its exit status.
+
+<img width="628" height="38" alt="image" src="https://github.com/user-attachments/assets/4b6fd0ba-9f31-420f-840f-e659d63e3924" />
 
 ---
 
@@ -156,14 +168,16 @@ Terminate a process using either its name or PID.
 ### 📝 Example
 
 ```bash
-./otProcessManager killProcess nginx
+./otProcessManager killProcess snap-store
 ```
 
 or
 
 ```bash
-./otProcessManager killProcess 1234
+./otProcessManager killProcess 10289
 ```
+
+<img width="549" height="68" alt="image" src="https://github.com/user-attachments/assets/65d90d0c-5d16-42cc-93b1-4898537e5b0c" />
 
 ---
 
@@ -177,6 +191,7 @@ Find processes that are currently waiting for resources.
 ./otProcessManager ListWaitingProcess
 ```
 
+<img width="587" height="67" alt="image" src="https://github.com/user-attachments/assets/dee83b45-1523-4cde-8a7c-6dbad2e6acdd" />
 
 
 ---
@@ -219,6 +234,8 @@ Register a script with a service alias.
 * `-s` → Script path
 * `-a` → Service alias
 
+<img width="673" height="75" alt="WhatsApp Image 2026-08-11 at 2 39 23 PM" src="https://github.com/user-attachments/assets/e832a7c0-98fb-4779-9309-85ae408881ee" />
+
 ---
 
 ## 📍 Task 2: Start a Service
@@ -237,6 +254,7 @@ Start the registered service as a daemon/background process.
 ./ProcessManager.sh -o start -a service1
 ```
 
+<img width="505" height="56" alt="image" src="https://github.com/user-attachments/assets/9677baa9-c8e2-4c3b-a411-be2af889d1bf" />
 
 ## 📍 Task 3: Check Service Status
 
@@ -267,6 +285,8 @@ If the service is stopped:
 service1 is not running
 ```
 
+<img width="525" height="93" alt="image" src="https://github.com/user-attachments/assets/78e833a3-363f-4819-adb3-cc49271622d7" />
+
 ---
 
 ## 📍 Task 4: Stop a Service
@@ -284,6 +304,7 @@ Stop a particular service.
 ```bash
 ./ProcessManager.sh -o kill -a service1
 ```
+<img width="673" height="135" alt="image" src="https://github.com/user-attachments/assets/91124629-34a4-448d-9bde-eeedb5edb73e" />
 
 ---
 
@@ -310,6 +331,7 @@ Change the priority of a service.
 ```bash
 ./ProcessManager.sh -o priority -p high -a service1
 ```
+<img width="673" height="237" alt="image" src="https://github.com/user-attachments/assets/da30bd04-8a62-40b8-a479-b1c53b79443b" />
 
 ---
 
@@ -350,6 +372,8 @@ service1
 service3
 ```
 
+<img width="671" height="258" alt="image" src="https://github.com/user-attachments/assets/1d2d2159-c6a6-491b-9cb8-78173f6c3a87" />
+
 ---
 
 ## 📍 Task 7: Display Process Details
@@ -368,14 +392,7 @@ To display details of a particular service:
 ./ProcessManager.sh -o top -a <alias>
 ```
 
-### 📝 Expected Output
-
-```text
-Alias     PID     State      Priority     Script
-service1  2456    Running    10           /home/user/service1.sh
-service2  2461    Sleeping   15           /home/user/service2.sh
-service3  2470    Running    5            /home/user/service3.sh
-```
+<img width="540" height="236" alt="image" src="https://github.com/user-attachments/assets/5a6ca519-ce1a-4f99-89b1-c468134c5909" />
 
 ---
 
@@ -406,45 +423,18 @@ Perform practical experiments to understand how Linux handles processes, log fil
 
 ---
 
-## 📍 Task 1: Clear a Log File of a Running Process
+## 📍 Task 1: Display Running Process
 
 First identify the running process:
 
 ```bash
 ps -ef
 ```
+<img width="866" height="405" alt="image" src="https://github.com/user-attachments/assets/c6077edf-77fa-4bfb-89eb-bdaccbab4584" />
 
-Clear the contents of the log file:
-
-```bash
-> application.log
-```
-
-or:
-
-```bash
-truncate -s 0 application.log
-```
-
-### 📖 Observation
-
-The process continues running because only the **contents of the log file** are cleared.
 
 ---
 
-## 📍 Task 2: Delete a Log File of a Running Process
-
-Delete the log file:
-
-```bash
-rm application.log
-```
-
-Check whether the running process still has the deleted file open:
-
-```bash
-lsof | grep deleted
-```
 
 ### 📖 Observation
 
@@ -459,31 +449,6 @@ The process can continue using its open file descriptor.
 
 ## 📍 Task 3: Elevate the Priority of a Process
 
-Check the running processes:
-
-```bash
-ps -eo pid,ni,comm
-```
-
-Check the priority/nice value of a particular process:
-
-```bash
-ps -o pid,ni,comm -p <PID>
-```
-
-Change the nice value:
-
-```bash
-sudo renice -n -5 -p <PID>
-```
-
-Verify the change:
-
-```bash
-ps -o pid,ni,comm -p <PID>
-```
-
-
 ### 🔹 Display Processes
 
 ```bash
@@ -495,6 +460,9 @@ ps -ef
 ```bash
 ps -eo pid,ppid,user,%cpu,%mem,stat,ni,comm
 ```
+
+<img width="673" height="515" alt="image" src="https://github.com/user-attachments/assets/86672738-5caf-412b-8997-c4137d0467c8" />
+
 
 ### 🔹 Change Process Priority
 
