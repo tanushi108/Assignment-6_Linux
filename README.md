@@ -434,8 +434,42 @@ ps -ef
 ```
 <img width="866" height="405" alt="image" src="https://github.com/user-attachments/assets/c6077edf-77fa-4bfb-89eb-bdaccbab4584" />
 
+Clear the contents of the log file:
+```bash 
+> application.log
+```
+or:
+
+```bash
+truncate -s 0 application.log
+```
+### 📖 Observation
+
+The process continues running because only the contents of the log file are cleared.
+
 ---
 
+## 📍 Task 2: Delete a Log File of a Running Process
+
+### Delete the log file:
+
+```bash
+rm application.log
+```
+
+Check whether the running process still has the deleted file open:
+
+```bash
+lsof | grep deleted
+```
+
+### 📖 Observation
+
+If a running process has the file open, deleting the file name does not immediately terminate the process.
+
+The process can continue using its open file descriptor.
+
+--- 
 ## 📍 Task 3: Elevate the Priority of a Process
 
 ### 🔹 Display Processes
